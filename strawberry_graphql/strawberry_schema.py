@@ -21,3 +21,11 @@ class Mutation:
     @strawberry.mutation
     def create_user(self, user:UserInput) -> UserType:
         return UserService.create_user(user=user)
+    
+    @strawberry.mutation
+    def delete_user(self, id:int) -> str:
+        return UserService.delete_user(id=id)
+    
+    @strawberry.mutation
+    def update_user(self, id:int, user:UserInput) -> UserType | None:
+        return UserService.update_user(id=id, user=user)
