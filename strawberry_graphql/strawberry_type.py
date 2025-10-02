@@ -5,7 +5,8 @@ from datetime import datetime
 class UserType:
     id: int
     username: str
-    instagram: str
-    email: str
-    bio: str
+    role: str
+    instagram: str | None
+    email: str | None
+    bio: str | None
     created_at: datetime

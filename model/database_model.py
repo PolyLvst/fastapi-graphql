@@ -10,6 +10,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String(255), unique=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
+    role = Column(String(255), default="user") # roles: user, admin
     instagram = Column(String(255))
     email = Column(String(255))
     bio = Column(Text)
